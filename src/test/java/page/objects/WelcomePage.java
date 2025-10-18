@@ -1,0 +1,24 @@
+package objects;
+
+import driver.manager.DriverManager;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import waits.WaitForElement;
+
+
+public class WelcomePage {
+
+    @FindBy(css = "#Content a")
+    private WebElement welcomeLink;
+
+    public WelcomePage(){
+        PageFactory.initElements(DriverManager.getDriver(),this);
+    }
+
+    public void enterWelcomePage(){
+        WaitForElement.waitUntilElementIsVisible(welcomeLink);
+        welcomeLink.click();
+    }
+
+}
