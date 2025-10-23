@@ -1,4 +1,4 @@
-package manager;
+package driver.manager;
 
 import org.openqa.selenium.WebDriver;
 
@@ -11,7 +11,8 @@ public class DriverManager {
     private static WebDriver driver;
 
     public static WebDriver getDriver() {
-        if (driver == null) {
+        if (driver == null)
+        {
             driver = BrowserFactory.getBrowser(BROWSER_TYPE);
         }
         return driver;

@@ -1,4 +1,4 @@
-package objects;
+package page.objects;
 
 import driver.manager.DriverManager;
 import driver.manager.DriverUtils;
