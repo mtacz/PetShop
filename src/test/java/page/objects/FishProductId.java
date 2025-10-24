@@ -25,5 +25,4 @@ public class FishProductId {
         logger.info("Clicked 'Angel Fish'");
         return new AddToCart();
     }
-
 }

@@ -18,8 +18,6 @@ public class AddToCart {
     @FindBy(css = "a[href*='newOrderForm']")
     private WebElement proceedToCheckOut;
 
-
-
     public AddToCart() {
         PageFactory.initElements(DriverManager.getDriver(), this);
     }

@@ -25,5 +25,4 @@ public class FooterPageAfterLogin {
         logger.info("Banner status after login displayed: {}", isBannerDisplayed);
         return isBannerDisplayed;
     }
-
 }

@@ -5,7 +5,7 @@ import page.objects.*;
 
 import static org.testng.Assert.assertEquals;
 
-public class AddSmallAngelFishToTheBasketTest extends TestBase {
+public class BuyingFishWithoutLoginTest extends TestBase {
 
     @Test
     public void buyingSmallAngelFishWithoutLoginOn() {
@@ -18,7 +18,6 @@ public class AddSmallAngelFishToTheBasketTest extends TestBase {
                  .choseAngelFish()
                  .clickOnAddToCartSmallAngelFish()
                  .proceedToCheckOutButton();
-
 
         String warningMessage = loginPage.checkSignOnWarningMessage();
 

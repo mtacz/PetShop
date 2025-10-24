@@ -26,5 +26,4 @@ public class WelcomePage {
         logger.info("Entered the Store link");
         return new SignInPage();
     }
-
 }
