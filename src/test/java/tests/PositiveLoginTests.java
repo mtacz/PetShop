@@ -1,6 +1,6 @@
 package tests;
 
-import driver.manager.DriverUtils;
+import driver.DriverUtils;
 import org.testng.annotations.Test;
 import page.objects.LoginPage;
 import page.objects.TestBase;

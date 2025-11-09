@@ -1,6 +1,6 @@
 package page.objects;
 
-import driver.manager.DriverManager;
+import driver.DriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
@@ -17,7 +17,7 @@ public class WelcomePage {
     private WebElement welcomeLink;
 
     public WelcomePage(){
-        PageFactory.initElements(DriverManager.getDriver(),this);
+        PageFactory.initElements(DriverManager.getWebDriver(),this);
     }
 
     public SignInPage enterWelcomePage(){

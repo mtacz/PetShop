@@ -2,8 +2,8 @@ package page.objects;
 
 import configuration.ConfigurationProperties;
 import configuration.PropertiesLoader;
-import driver.manager.DriverManager;
-import driver.manager.DriverUtils;
+import driver.DriverManager;
+import driver.DriverUtils;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -23,7 +23,7 @@ public class TestBase {
 
     @BeforeMethod
     public void beforeTest() {
-        DriverManager.getDriver();
+        DriverManager.getWebDriver();
         DriverUtils.setInitialConfiguration();
         DriverUtils.navigateToPage(APPLICATION_URL);
     }

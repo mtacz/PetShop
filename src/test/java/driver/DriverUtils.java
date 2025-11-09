@@ -1,12 +1,12 @@
-package driver.manager;
+package driver;
 
 public class DriverUtils {
 
     public static void setInitialConfiguration(){
-        DriverManager.getDriver().manage().window().maximize();
+        DriverManager.getWebDriver().manage().window().maximize();
     }
 
     public static void navigateToPage(String pageUrl){
-        DriverManager.getDriver().navigate().to(pageUrl);
+        DriverManager.getWebDriver().navigate().to(pageUrl);
     }
 }
