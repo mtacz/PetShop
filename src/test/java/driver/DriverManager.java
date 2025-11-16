@@ -8,23 +8,23 @@ import static configuration.TestRunProperties.getIsRemoteRun;
 
 public class DriverManager {
 
-    private static WebDriver driver;
+    private static ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
 
     private DriverManager() {
     }
 
     public static WebDriver getWebDriver() {
-        if (driver == null) {
-            driver = new BrowserFactory(getBrowserToRun(),getIsRemoteRun()).getBrowser();
+        if (webDriverThreadLocal.get() == null) {
+            webDriverThreadLocal.set(new BrowserFactory(getBrowserToRun(),getIsRemoteRun()).getBrowser());
         }
-        return driver;
+        return webDriverThreadLocal.get();
     }
 
     public static void disposeDriver() {
-        driver.close();
-        if (driver != null) {
-            driver.quit();
+        webDriverThreadLocal.get().close();
+        if (webDriverThreadLocal != null) {
+            webDriverThreadLocal.get().quit();
         }
-        driver = null;
+        webDriverThreadLocal.remove();
     }
 }
