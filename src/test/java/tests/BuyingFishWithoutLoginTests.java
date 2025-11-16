@@ -5,7 +5,7 @@ import page.objects.*;
 
 import static org.testng.Assert.assertEquals;
 
-public class BuyingFishWithoutLoginTest extends TestBase {
+public class BuyingFishWithoutLoginTests extends TestBase {
 
     @Test
     public void buyingSmallAngelFishWithoutLoginOn() {
