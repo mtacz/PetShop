@@ -1,6 +1,7 @@
 package page.objects;
 
 import driver.DriverManager;
+import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
@@ -22,6 +23,7 @@ public class AddToCart {
         PageFactory.initElements(DriverManager.getWebDriver(), this);
     }
 
+    @Step("Clicking add to cart button")
     public AddToCart clickOnAddToCartSmallAngelFish() {
         WaitForElement.waitUntilElementIsVisible(addToCartSmallAngelFish);
         addToCartSmallAngelFish.click();
@@ -29,6 +31,7 @@ public class AddToCart {
         return this;
     }
 
+    @Step("Clicking proceed to check out")
     public AddToCart proceedToCheckOutButton() {
         proceedToCheckOut.click();
         logger.info("Clicked proceed to check out");

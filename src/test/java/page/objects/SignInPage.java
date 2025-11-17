@@ -1,6 +1,7 @@
 package page.objects;
 
 import driver.DriverManager;
+import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
@@ -20,6 +21,7 @@ public class SignInPage {
         PageFactory.initElements(DriverManager.getWebDriver(),this);
     }
 
+    @Step("Clicking on Sign in Link")
     public LoginPage clickOnSignInLink(){
         WaitForElement.waitUntilElementClickable(signIn);
         signIn.click();

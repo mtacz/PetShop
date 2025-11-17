@@ -1,6 +1,7 @@
 package page.objects;
 
 import driver.DriverManager;
+import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
@@ -19,6 +20,7 @@ public class FishProductId {
         PageFactory.initElements(DriverManager.getWebDriver(), this);
     }
 
+    @Step("Choosing Angel Fish")
     public AddToCart choseAngelFish() {
         WaitForElement.waitUntilElementIsVisible(angelFish);
         angelFish.click();
