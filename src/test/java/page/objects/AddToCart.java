@@ -11,7 +11,7 @@ import waits.WaitForElement;
 
 public class AddToCart {
 
-    Logger logger = LogManager.getRootLogger();
+    Logger logger = LogManager.getLogger(AddToCart.class);
 
     @FindBy(css = "a[href*='ItemId=EST-2']")
     private WebElement addToCartSmallAngelFish;

@@ -11,7 +11,7 @@ import waits.WaitForElement;
 
 public class FishProductId {
 
-    Logger logger = LogManager.getRootLogger();
+    Logger logger = LogManager.getLogger(FishProductId.class);
 
     @FindBy(css = "a[href*='productId=FI-SW-01']")
     private WebElement angelFish;

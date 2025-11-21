@@ -11,7 +11,7 @@ import waits.WaitForElement;
 
 public class SignInPage {
 
-    Logger logger = LogManager.getRootLogger();
+    Logger logger = LogManager.getLogger(SignInPage.class);
 
 
     @FindBy(css = "#MenuContent a[href*='signonForm']")

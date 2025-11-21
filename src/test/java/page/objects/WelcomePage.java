@@ -12,7 +12,7 @@ import waits.WaitForElement;
 
 public class WelcomePage {
 
-    private Logger logger = LogManager.getRootLogger();
+    private Logger logger = LogManager.getLogger(WelcomePage.class);
 
     @FindBy(css = "#Content a")
     private WebElement welcomeLink;

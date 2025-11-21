@@ -11,7 +11,7 @@ import waits.WaitForElement;
 
 public class FooterPageAfterLogin {
 
-    Logger logger = LogManager.getRootLogger();
+    Logger logger = LogManager.getLogger(FooterPageAfterLogin.class);
 
     @FindBy(css = "#Banner img[src*='dog']")
     private WebElement bannerAfterLogin;
