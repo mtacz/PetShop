@@ -1,6 +1,7 @@
 package page.objects;
 
 import driver.DriverManager;
+import generic.assertions.AssertWebElement;
 import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -64,10 +65,10 @@ public class LoginPage {
     }
 
     @Step("Checking warning message")
-    public String checkSignOnWarningMessage() {
+    public LoginPage assertThatWarningMessageIsDisplayed(String warningMessage) {
+        logger.info("Checking if warning message was displayed: {}", warningMessage);
         WaitForElement.waitUntilElementIsVisible(signOnWarningMessage);
-        String warningMessage = signOnWarningMessage.getText();
-        logger.info("Returned warning message was: {}", warningMessage);
-        return warningMessage;
+        AssertWebElement.assertThat(signOnWarningMessage).isDisplayed().hasText(warningMessage);
+        return this;
     }
 }

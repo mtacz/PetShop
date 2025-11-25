@@ -20,14 +20,14 @@ public class BuyingFishWithoutLoginTests extends TestBase {
         welcomePage.enterWelcomePage();
 
         LoginPage loginPage = new LoginPage();
-        loginPage.clickOnMenuWithFishOption()
+        loginPage
+                .clickOnMenuWithFishOption()
                  .choseAngelFish()
                  .clickOnAddToCartSmallAngelFish()
                  .proceedToCheckOutButton();
-
-        String warningMessage = loginPage.checkSignOnWarningMessage();
-
-        assertEquals(warningMessage, "You must sign on before attempting to check out. Please " +
+        loginPage
+                .assertThatWarningMessageIsDisplayed("You must sign on before attempting to check out. Please " +
                 "sign on and try checking out again.");
+
     }
 }
