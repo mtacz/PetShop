@@ -49,7 +49,7 @@ public class LoginPage {
         return this;
     }
 
-    @Step("Clocking on Login button")
+    @Step("Clicking on Login button")
     public FooterPageAfterLogin clickOnLoginButton(){
         signOnButton.click();
         logger.info("Clicked on Login button");
