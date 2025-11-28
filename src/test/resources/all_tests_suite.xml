@@ -3,6 +3,7 @@
 <suite name="All Pet Store Tests" parallel="tests" thread-count="2">
     <listeners>
         <listener class-name="utils.testng.listeners.TestListeners"/>
+        <listener class-name="utils.testng.listeners.AnnotationTransformer"/>
     </listeners>
 
     <test name="Buying Without Login Tests">

@@ -1,17 +1,12 @@
 package page.objects;
 
-import driver.DriverManager;
 import io.qameta.allure.Step;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import waits.WaitForElement;
 
-public class AddToCart {
+public class AddToCart extends BasePage {
 
-    Logger logger = LogManager.getLogger(AddToCart.class);
 
     @FindBy(css = "a[href*='ItemId=EST-2']")
     private WebElement addToCartSmallAngelFish;
@@ -19,22 +14,19 @@ public class AddToCart {
     @FindBy(css = "a[href*='newOrderForm']")
     private WebElement proceedToCheckOut;
 
-    public AddToCart() {
-        PageFactory.initElements(DriverManager.getWebDriver(), this);
-    }
 
     @Step("Clicking add to cart button")
     public AddToCart clickOnAddToCartSmallAngelFish() {
         WaitForElement.waitUntilElementIsVisible(addToCartSmallAngelFish);
         addToCartSmallAngelFish.click();
-        logger.info("Clicked 'add to cart'");
+        log().info("Clicked 'add to cart'");
         return this;
     }
 
     @Step("Clicking proceed to check out")
     public AddToCart proceedToCheckOutButton() {
         proceedToCheckOut.click();
-        logger.info("Clicked proceed to check out");
+        log().info("Clicked proceed to check out");
         return this;
     }
 
