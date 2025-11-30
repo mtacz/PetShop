@@ -6,13 +6,20 @@ pipeline {
                 bat 'mvn clean install -DskipTests'
             }
         }
+        stage('Run selenium grid'){
+            steps{
+            bat 'docker-compose up -d'
+            }
+        }
         stage('Execute test') {
             steps {
                 bat 'mvn test'
+                bat 'docker-compose down'
             }
         }
-        stage('Generate allure report') {
-            steps {
+    }
+    post {
+            always {
                 script {
                     allure([
                             includeProperties: false,
@@ -25,4 +32,3 @@ pipeline {
             }
         }
     }
-}

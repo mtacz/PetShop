@@ -66,19 +66,19 @@ public class BrowserFactory {
 
     private ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
-        options.setPlatformName("Windows 10");
+       // options.setPlatformName("Windows 10");
         return options;
     }
 
     private FirefoxOptions getFirefoxOptions() {
         FirefoxOptions options = new FirefoxOptions();
-        options.setPlatformName("Windows 10");
+      //  options.setPlatformName("Windows 10");
         return options;
     }
 
     private EdgeOptions getEdgeOptions() {
         EdgeOptions options = new EdgeOptions();
-        options.setPlatformName("Windows 10");
+       // options.setPlatformName("Windows 10");
         return options;
     }
 }
